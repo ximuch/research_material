@@ -9,6 +9,7 @@ def txt_resolve(txt_path):
     # 读取TXT文件内容
     col_list1 = []
     col_list2 = []
+    print(txt_path)
     try:
         with open(txt_path, 'r', encoding='utf-8') as file:
             file_data = file.read().split('Angle,       PSD,')[1]
