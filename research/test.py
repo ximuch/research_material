@@ -12,7 +12,6 @@ for txt_dir in os.listdir(text_path):
             # 如果是 .txt 文件，则提取
             list_file.append(text_path+txt_dir+'/'+txt_file)
 
-        print(list_file)
 
 
 
