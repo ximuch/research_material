@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 import os
 
-
 def txt_resolve(txt_path):
     # 读取TXT文件内容
     col_list1 = []
@@ -33,9 +32,7 @@ def txt_resolve(txt_path):
         pass
     return col_list1, col_list2
 
-
 # 画图的函数
-# 注意：我从处理另一个实验数据的脚本中拷贝了部分代码，所以变量名有些奇怪
 def draw(theta2, intensity, label, line_color):
     theta2_list = np.array(theta2)
     intensity_list = np.array(intensity)
@@ -47,7 +44,6 @@ def draw(theta2, intensity, label, line_color):
 def split_txt(txt, step=0):
     a = []
     b = []
-
     col_list1, col_list2 = txt_resolve(txt)
     for l1 in col_list1:
         m=float(l1)
@@ -80,7 +76,6 @@ for txt_file, color in zip(list_file, colors):
     name = os.path.splitext(os.path.basename(txt_file))[0]
     draw(x_list, y_list, name, color)
     count += 4000
-
 
 # 设置图像的参数
 # 横坐标文本

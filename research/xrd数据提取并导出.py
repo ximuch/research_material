@@ -7,8 +7,6 @@ def txt_to_excel(txt_path, excel_path):
             # lines = file.readlines()
             file_data = file.read().split('[Data]')[1]
 
-        # data_lines = file_data.split('\n')
-        # print(data_lines)
         col_list1 = []
         col_list2 = []
         # 数据提取并处理
@@ -32,10 +30,8 @@ def txt_to_excel(txt_path, excel_path):
     # 将TXT文件的内容转换为DataFrame
     data = {'2theta': col_list1, 'Intensity': col_list2}
     excel_data = pd.DataFrame(data)
-
     # 将DataFrame写入Excel文件
     excel_data.to_excel(excel_path, index=False)
-
 
 # 使用函数
 txt_file = "D:/pythonProjects/input.txt" # 输入的xrd txt文件名
